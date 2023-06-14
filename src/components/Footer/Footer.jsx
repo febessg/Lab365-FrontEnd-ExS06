@@ -1,5 +1,7 @@
 import './Footer.css';
 import logo from '../../assets/logo.png';
+import instaLogo from '../../assets/instagram.png';
+import fbLogo from '../../assets/facebook.png';
 
 function Footer() {
     return (  
@@ -23,6 +25,8 @@ function Footer() {
                         </ul>
                     </div>
                     <div className='social-wrapper'>
+                        <a href="https://www.instagram.com/studiogabriellabess/" target='blank'><img src={instaLogo} alt="Logo Instagram" /></a>
+                        <a href="https://www.facebook.com/studiogabriellabess" target='blank'><img src={fbLogo} alt="Logo Facebook" /></a>
                     </div>
                 </div>
                 <div className='container-wrapper'>
@@ -30,7 +34,6 @@ function Footer() {
                     <ul>
                         <li><a href="#">Unhas</a></li>
                         <li><a href="#">Contato</a></li>
-                        <li><a href="#">Termos e Condições</a></li>
                     </ul>
                 </div>
             </div>
