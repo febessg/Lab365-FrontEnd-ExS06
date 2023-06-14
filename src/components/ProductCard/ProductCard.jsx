@@ -1,10 +1,12 @@
 import './ProductCard.css';
 import Button from '../Button/Button';
+import propTypes from 'prop-types';
 
 function ProductCard(props) {
     return (  
         <div className='product-card'>
             <div className='image-wrapper'>
+                <img src={props.imgPath} alt="Imagem unha" />
                 <span>{props.price}</span>
             </div>
             <div className='card-data'>
@@ -13,10 +15,12 @@ function ProductCard(props) {
                 <div className='card-details'>
                     <div className="details">
                         <ul>
-                            <li>{props.detail1}</li>
-                            <li>{props.detail2}</li>
-                            <li>{props.detail3}</li>
-                            <li>{props.detail4}</li>
+                        {props.details.map(item => {
+                                if (item) {
+                                return ( 
+                                    <li>{item}</li>
+                                )}
+                            })}
                         </ul>
                     </div>
                     <div className='details-button'>
@@ -26,6 +30,14 @@ function ProductCard(props) {
             </div>
         </div>
     );
+}
+
+ProductCard.propTypes = {
+    imgPath: propTypes.string,
+    price: propTypes.string,
+    title: propTypes.string,
+    info: propTypes.string,
+    details: propTypes.array
 }
 
 export default ProductCard;
