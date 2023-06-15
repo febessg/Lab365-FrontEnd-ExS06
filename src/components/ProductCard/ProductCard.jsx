@@ -15,10 +15,10 @@ function ProductCard(props) {
                 <div className='card-details'>
                     <div className="details">
                         <ul>
-                        {props.details.map(item => {
+                        {props.details.map((item, index) => {
                                 if (item) {
                                 return ( 
-                                    <li>{item}</li>
+                                    <li key={index}>{item}</li>
                                 )}
                             })}
                         </ul>
