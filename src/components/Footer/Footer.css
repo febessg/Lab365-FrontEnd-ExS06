@@ -79,7 +79,7 @@
 }
 
 @media (max-width: 800px) {
-    .logo-wrapper {
+    .Footer .logo-wrapper {
         display: none;
     }
 

@@ -32,8 +32,9 @@ function Footer() {
                 <div className='container-wrapper'>
                     <h2>Informações</h2>
                     <ul>
-                        <li><a href="#">Unhas</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="/contact">Contato</a></li>
+                        <li><a href="#">FAQ</a></li>
                     </ul>
                 </div>
             </div>

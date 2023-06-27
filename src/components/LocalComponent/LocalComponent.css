@@ -1,0 +1,71 @@
+.local-component-wrapper {
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.local-component-wrapper h1 {
+    color: #666666;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0 24px;
+    margin-bottom: 24px;
+}
+
+.local-component-wrapper .local-wrapper {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.local-component-wrapper .local-wrapper iframe {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.local-component-wrapper .local-wrapper .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 24px;
+}
+
+.local-component-wrapper .local-info-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.local-component-wrapper .content-wrapper h3{
+    color: #666666;
+    font-weight: 500;
+}
+
+.local-component-wrapper .local-info-wrapper .column-wrapper {
+    flex: 1;
+    border-left: 2px solid rgba(136, 136, 136, 1);
+    padding-left: 10px;
+    min-width: 270px;
+}
+
+.local-component-wrapper .local-info-wrapper .column-wrapper ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+
+.local-component-wrapper  li, .local-component-wrapper a {
+    color: rgba(136, 136, 136, 1);
+    text-decoration: none;
+}
+
+.local-component-wrapper .content-wrapper span {
+    color: #aaaaaa;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+
+

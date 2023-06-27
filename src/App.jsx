@@ -1,18 +1,23 @@
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css'
-import Banner from './components/Banner/Banner';
-import Header from './components/Header/Header';
-import Main from './components/Main/Main';
-import Footer from './components/Footer/Footer';
+import { HomePage } from './pages/HomePage/HomePage';
+import { ContactPage } from './pages/ContactPage/ContactPage';
+import { ServicesPage } from './pages/ServicesPage/ServicesPage';
+import { FaqPage } from './pages/FaqPage/FaqPage';
+import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
 
 function App() {
   return (
-    <div className='app-container'>
-     <Header/>
-     <Banner quote="Renovo sua autoestima através da unha"/>
-     <Main/>
-     <Footer/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='/contact' element={<ContactPage/>}/>
+        <Route path='/services' element={<ServicesPage/>}/>
+        <Route path='/faq' element={<FaqPage/>}/>
+        <Route path='*' element={<NotFoundPage/>}/>
+      </Routes>
+    </Router>
   )
 }
 
-export default App
+export default App;
