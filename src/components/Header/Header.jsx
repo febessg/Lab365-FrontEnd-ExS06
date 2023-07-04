@@ -1,5 +1,7 @@
 import './Header.css';
+import {Link} from 'react-router-dom';
 import logo from '../../assets/logo.png';
+
 
 function Header() {
     return ( 
@@ -8,9 +10,9 @@ function Header() {
                 <a href="/"><img src={logo} alt="Logo" /></a>
             </div>
                 <ul className='menu-wrapper'>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="/contact">Contato</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><Link to={'/services'}>Serviços</Link></li>
+                    <li><Link to={'/contact'}>Contato</Link></li>
+                    <li><Link to={'/faq'}>FAQ</Link></li>
                 </ul>
         </nav>
     );
