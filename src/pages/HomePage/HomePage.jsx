@@ -1,13 +1,31 @@
 import './HomePage.css';
+
+import { useContext, useEffect, useState } from 'react';
+import { BannerContext } from '../../contexts/BannerContext/BannerContext';
+
 import ProductCard from '../../components/ProductCard/ProductCard';
-import gel from '../../assets/gel.jpeg';
-import alongamento from '../../assets/alongamento.jpeg';
-import manutencao from '../../assets/manutencao.jpeg';
 import Banner from '../../components/Banner/Banner';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 
+import gel from '../../assets/gel.jpeg';
+import alongamento from '../../assets/alongamento.jpeg';
+import manutencao from '../../assets/manutencao.jpeg';
+
 export const HomePage = () => {
+  const {setBanner} = useContext(BannerContext);
+
+  const setHomeBanner = () => {
+    const newBanner = {
+      quote: 'Renovo sua autoestima através das unhas',
+      title: 'Por Gabriella Bess'
+    };
+    setBanner(newBanner)
+  }
+
+  useEffect(() => {setHomeBanner()}, [])
+ 
+
   const products = [
     {
         id: 1,
@@ -37,7 +55,7 @@ export const HomePage = () => {
     return (
       <div className='home-page-container'>
        <Header/>
-       <Banner title='Por Gabriella Bess' quote='Renovo sua autoestima através das unhas'/>
+       <Banner/>
        <div className='cards-wrapper'>
             {products.map((product) => (
         <ProductCard

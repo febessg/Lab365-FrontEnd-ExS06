@@ -1,18 +1,16 @@
+import { useContext } from 'react';
 import './Banner.css';
-import propTypes from 'prop-types';
+import { BannerContext } from '../../contexts/BannerContext/BannerContext';
 
-function Banner({title, quote}) {
+function Banner() {
+    const {banner} = useContext(BannerContext);
+
     return ( 
         <div className='Banner'>
-            <h3 className='text-muted'>{quote}</h3>
-            <h1>{title}<span className='text-brown'>.</span></h1>
+            <h3 className='text-muted'>{banner.quote}</h3>
+            <h1>{banner.title}<span className='text-brown'>.</span></h1>
         </div>
     );
-}
-
-Banner.propTypes = {
-    quote: propTypes.string.isRequired,
-    title: propTypes.string.isRequired
 }
 
 export default Banner;
